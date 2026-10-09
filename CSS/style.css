@@ -1,0 +1,83 @@
+/* --- Menu Page Grid Layout --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.menu-item {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+    border: 1px solid #eee;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+/* FIXED: This forces the huge food images to resize perfectly */
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Crops the image neatly into the box without squeezing it */
+    display: block;
+}
+
+.menu-item-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #d32f2f; /* Fast food red */
+}
+
+.menu-item p {
+    margin: 0 0 20px 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Forces the price and action buttons to sit clearly at the very bottom */
+.price-order-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+.menu-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2e7d32; /* Money green color */
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}

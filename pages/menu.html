@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Lolwethu Fast Food Kitchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+            color: #333;
+        }
+
+        /* --- RED BRAND NAVIGATION BAR --- */
+        header {
+            background-color: #d32f2f;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover { color: #fbc02d; }
+
+        .menu-header {
+            text-align: center;
+            padding: 40px 20px 10px 20px;
+        }
+
+        .menu-header h2 {
+            font-size: 2.8rem;
+            color: #d32f2f;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* --- 5-MEAL GRID SYSTEM CONTAINER --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 80px 20px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-color: #eaeaea;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: white;
+            color: #d32f2f;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .card-details {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-details h3 {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .card-details p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #666;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .order-btn {
+            background-color: #d32f2f;
+            color: white;
+            text-decoration: none;
+            padding: 12px 0;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .order-btn:hover { background-color: #b71c1c; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Lolwethu Fast Food</h1>
+        </div>
+         <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./enquiry.html">Enquiry</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="menu-header">
+            <h2>Top Rated Meals</h2>
+        </section>
+
+        <div class="menu-grid">
+            
+            <!-- MEAL 1: BURGER -->
+            <div class="menu-card">
+                <div class="image-box">
+                    <span class="price-tag">R60.00</span>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 400 300' style='background:%23d32f2f;'><rect width='400' height='300' fill='%23d32f2f'/><text x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23fff' text-anchor='middle' dy='.3em'>🍔 Burger Combo</text></svg>" alt="Classic Burger Combo">
+                </div>
+                <div class="card-details">
+                    <h3>Classic Burger Combo</h3>
+                    <p>Our signature juicy beef patty with fresh lettuce, tomato, and secret sauce. Served with a side of chips.</p>
+                    <a href="enquiry.html" class="order-btn">Add to Order</a>
+                </div>
+            </div>
+
+            <!-- MEAL 2: GATSBY -->
+            <div class="menu-card">
+                <div class="image-box">
+                    <span class="price-tag">R120.00</span>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 400 300' style='background:%23e65c00;'><rect width='400' height='300' fill='%23e65c00'/><text x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23fff' text-anchor='middle' dy='.3em'>🥖 Special Gatsby</text></svg>" alt="Full Special Gatsby">
+                </div>
+                <div class="card-details">
+                    <h3>Full Special Gatsby</h3>
+                    <p>The ultimate big footprint sub meal loaded with chips and protein when you are incredibly hungry.</p>
+                    <a href="enquiry.html" class="order-btn">Add to Order</a>
+                </div>
+            </div>
+
+            <!-- MEAL 3: KOTA -->
+            <div class="menu-card">
+                <div class="image-box">
+                    <span class="price-tag">R45.00</span>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 400 300' style='background:%23fbc02d;'><rect width='400' height='300' fill='%23fbc02d'/><text x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23fff' text-anchor='middle' dy='.3em'>🍞 Loaded Kota</text></svg>" alt="Special Loaded Kota">
+                </div>
+                <div class="card-details">
+                    <h3>Special Loaded Kota</h3>
+                    <p>Filling and tasty quarter-loaf bread packed with fresh slap chips, polony, egg, cheese, and house sauces.</p>
+                    <a href="enquiry.html" class="order-btn">Add to Order</a>
+                </div>
+            </div>
+
+            <!-- MEAL 4: WINGS -->
+            <div class="menu-card">
+                <div class="image-box">
+                    <span class="price-tag">R55.00</span>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 400 300' style='background:%232e7d32;'><rect width='400' height='300' fill='%232e7d32'/><text x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23fff' text-anchor='middle' dy='.3em'>🍗 Wings & Chips</text></svg>" alt="Wings & Chips">
+                </div>
+                <div class="card-details">
+                    <h3>Wings & Chips</h3>
+                    <p>Perfectly spiced, juicy flame-grilled or crispy chicken wings served alongside a generous portion of hot golden slap chips.</p>
+                    <a href="enquiry.html" class="order-btn">Add to Order</a>
+                </div>
+            </div>
+
+            <!-- MEAL 5: RUSSIAN -->
+            <div class="menu-card">
+                <div class="image-box">
+                    <span class="price-tag">R40.00</span>
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 400 300' style='background:%2337474f;'><rect width='400' height='300' fill='%2337474f'/><text x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23fff' text-anchor='middle' dy='.3em'>🌭 Russian & Chips</text></svg>" alt="Russian & Chips">
+                </div>
+                <div class="card-details">
+                    <h3>Russian & Chips</h3>
+                    <p>Deep-fried, premium smoky Russian sausage scored across and paired with our signature well-seasoned salt & vinegar chips.</p>
+                    <a href="enquiry.html" class="order-btn">Add to Order</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

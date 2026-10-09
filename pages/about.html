@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lolwethu's Fast Food Kitchen</title>
+    <!-- Pointing directly to your root CSS sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Clean Layout System matching Home and Menu */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+            color: #333;
+        }
+
+        /* --- RED BRAND NAVIGATION BAR --- */
+        header {
+            background-color: #d32f2f; /* Fast food brand red */
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #fbc02d; /* Fast food yellow highlight */
+        }
+
+        /* --- CONTENT SECTION LAYOUT --- */
+        .page-content-padding {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h2 {
+            font-size: 2.8rem;
+            color: #d32f2f;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .page-title p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .about-card h2 {
+            color: #d32f2f;
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #fbc02d; /* Food yellow accent line */
+            padding-bottom: 8px;
+        }
+
+        .about-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .about-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            margin: 0 0 15px 0;
+        }
+
+        .about-card ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .about-card ul li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 8px;
+            list-style-type: square;
+        }
+
+        /* --- FOOTER LAYOUT --- */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #212121;
+            color: white;
+            margin-top: 60px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Lolwethu Fast Food</h1>
+        </div>
+        <!-- FIXED PATHS: All HTML files live side-by-side in the main folder -->
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main class="page-content-padding">
+        <section class="page-title">
+            <h2>About Us</h2>
+            <p>Learn more about Lolwethu's Fast Food Kitchen.</p>
+        </section>
+
+        <!-- Structured info container matching your brand cards -->
+        <section class="about-card">
+            <h2>Our Story</h2>
+            <p>Lolwethu's Fast Food Kitchen is a local fast food business based in Gqeberha. The business provides affordable, hot, and delicious meals for customers who enjoy high-quality fast food on the go.</p>
+            <p>We sell different types of freshly prepared meals including kotas, gatsbys, wings and chips, Russian and chips, and burgers.</p>
+
+            <h2>Our Goal</h2>
+            <p>Our goal is to provide tasty food at reasonable prices and to make sure that our customers thoroughly enjoy their meals every single time they visit.</p>
+
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Highly affordable food options</li>
+                <li>Different delicious meals to choose from</li>
+                <li>Convenient, central location</li>
+                <li>Friendly and fast service</li>
+                <li>Freshly prepared food every day</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lolwethu's Fast Food Kitchen</p>
+    </footer>
+
+</body>
+</html>

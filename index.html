@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lolwethu Fast Food Kitchen | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+            color: #333;
+        }
+
+        /* --- RED BRAND NAVIGATION BAR --- */
+        header {
+            background-color: #d32f2f; 
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #fbc02d; 
+        }
+
+        /* --- CONTENT WRAPPER --- */
+        .hero-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            color: #d32f2f;
+            margin: 0 0 20px 0;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 0 30px 0;
+        }
+
+        .menu-btn {
+            background-color: #d32f2f;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+        }
+
+        /* --- RE-SECURED IMAGE BOX CONTAINER --- */
+        .hero-image-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Lolwethu Fast Food</h1>
+        </div>
+        <!-- FIXED NAVIGATION BAR: All items reference direct cross paths sitting side-by-side -->
+        <nav class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./pages/about.html">About Us</a>
+            <a href="./pages/contact.html">Contact Us</a>
+            <a href="./pages/menu.html">Menu</a>
+            <a href="./pages/enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Fresh. Fast. Flavorful.</h2>
+                <p>We sell affordable and tasty fast food for people who want a quick and filling meal and you can get it in a few minutes. We offer kotas, gatsbys, wings and chips, Russian and chips, burgers and chips. We are located in the heart of the city and we are open from 8am to 10pm every day.</p>
+                <a href="menu.html" class="menu-btn">View Our Menu</a>
+            </div>
+
+            <div class="hero-image-box">
+                <!-- Direct clean folder path link to your custom burger file -->
+                <img src="Assets/images/burger.jpg" alt="Delicious Floating Burger Explosion">
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
