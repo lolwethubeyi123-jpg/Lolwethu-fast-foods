@@ -3,208 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Lolwethu's Fast Food Kitchen</title>
-    <!-- Pointing directly to your root CSS sheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Clean Layout System matching Home, About, and Menu */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fcf8f2;
-            color: #333;
-        }
-
-        /* --- RED BRAND NAVIGATION BAR --- */
-        header {
-            background-color: #d32f2f; /* Fast food brand red */
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-area h1 {
-            color: white;
-            margin: 0;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        .nav-links a:hover {
-            color: #fbc02d; /* Fast food yellow highlight */
-        }
-
-        /* --- CONTENT SECTION LAYOUT --- */
-        .page-content-padding {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .page-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .page-title h2 {
-            font-size: 2.8rem;
-            color: #d32f2f;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-        }
-
-        .page-title p {
-            font-size: 1.1rem;
-            color: #666;
-            margin: 0;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        }
-
-        .contact-card h3 {
-            color: #d32f2f;
-            font-size: 1.3rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-left: 4px solid #fbc02d; /* Food yellow side accent */
-            padding-left: 10px;
-        }
-
-        .contact-card h3:first-of-type {
-            margin-top: 0;
-        }
-
-        .contact-card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #444;
-            margin: 0 0 15px 0;
-        }
-
-        /* Styling for the email link */
-        .contact-card p a {
-            color: #d32f2f;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-card p a:hover {
-            text-decoration: underline;
-            color: #b71c1c;
-        }
-
-        /* Embedded Google Map styling */
-        iframe {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            display: block;
-        }
-
-        /* --- FOOTER LAYOUT --- */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background-color: #212121;
-            color: white;
-            margin-top: 60px;
-            font-size: 1rem;
-        }
-    </style>
+    <title>Contact Us | Lolwethu's Fast Food Kitchen, Gqeberha</title>
+    <meta name="description" content="Contact Lolwethu's Fast Food Kitchen at 170 Russell Rd, Central, Gqeberha. Find our opening hours, phone number, map and send us a message.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="../js/map.js" defer></script>
+    <script src="../js/forms.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <h1>Lolwethu Fast Food</h1>
-        </div>
-        <!-- FIXED PATHS: All HTML files live side-by-side in the main folder -->
-          <nav class="nav-links">
+    <header class="site-header">
+        <a href="../index.html">
+            <img src="../Assets/Lolwethu's fast food logo.png" alt="Lolwethu's Fast Food Kitchen logo" width="120" height="90">
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
             <a href="../index.html">Home</a>
             <a href="./about.html">About Us</a>
             <a href="./contact.html">Contact Us</a>
             <a href="./menu.html">Menu</a>
             <a href="./enquiry.html">Enquiry</a>
         </nav>
-
-
     </header>
 
     <main class="page-content-padding">
         <section class="page-title">
-            <h2>Contact Us</h2>
+            <h1>Contact Us</h1>
             <p>Get in touch with Lolwethu's Fast Food Kitchen.</p>
         </section>
 
-        <!-- Structured white card containing all clean contact elements -->
         <section class="contact-card">
-            <h3>Our Location</h3>
+            <h2>Our Location</h2>
             <p>170 Russel RD Central, Gqeberha</p>
 
-            <h3>Find Us</h3>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1918098729616!2d25.608035875020185!3d-33.961909123886265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e91fd0147%3A0xdef6393de0dee01d!2s170%20Russell%20Rd%2C%20Central%2C%20Gqeberha%2C%206001!5e0!3m2!1sen!2sza!4v1791370791938!5m2!1sen!2sza" 
-                width="100%" 
-                height="400" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
+            <h2>Find Us</h2>
+            <div id="map" role="region" aria-label="Map showing 170 Russell Road, Central, Gqeberha"></div>
+            <noscript>
+                <p><a href="https://www.google.com/maps/search/?api=1&amp;query=170+Russell+Rd+Central+Gqeberha">View our location on Google Maps</a></p>
+            </noscript>
 
-            <h3>Phone Number</h3>
-            <p>078 260 0902</p>
+            <h2>Phone Number</h2>
+            <p><a href="tel:+27782600902">078 260 0902</a></p>
 
-            <h3>Email Address</h3>
+            <h2>Email Address</h2>
             <p><a href="mailto:lolwethubeyi123@gmail.com">lolwethubeyi123@gmail.com</a></p>
 
-            <h3>Opening Hours</h3>
+            <h2>Opening Hours</h2>
             <p>Monday - Saturday: 10:00 - 21:00</p>
             <p>Sunday: 11:00 - 20:00</p>
 
-            <!-- General message form: compiled into an email to the recipient set in the script below -->
-            <h3>Send Us a Message</h3>
+            <h2>Send Us a Message</h2>
             <p>Fill in the form below and we will prepare an email to our team for you to send.</p>
 
             <form id="contactForm" action="#" method="POST" novalidate>
-                <div style="display:flex; flex-direction:column; margin-bottom:20px;">
-                    <label for="contactName" style="font-weight:bold; margin-bottom:8px; color:#333;">Full Name</label>
-                    <input type="text" id="contactName" name="name" placeholder="Enter your full name" required style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family:inherit;">
-                    <small id="contactNameError" style="color:#d32f2f; margin-top:6px;"></small>
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="Enter your full name" autocomplete="name" required data-rule="name">
+                    <small id="contactNameError" class="form-error"></small>
                 </div>
 
-                <div style="display:flex; flex-direction:column; margin-bottom:20px;">
-                    <label for="contactEmail" style="font-weight:bold; margin-bottom:8px; color:#333;">Email Address</label>
-                    <input type="email" id="contactEmail" name="email" placeholder="Enter your email address" required style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family:inherit;">
-                    <small id="contactEmailError" style="color:#d32f2f; margin-top:6px;"></small>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="Enter your email address" autocomplete="email" required data-rule="email">
+                    <small id="contactEmailError" class="form-error"></small>
                 </div>
 
-                <div style="display:flex; flex-direction:column; margin-bottom:20px;">
-                    <label for="contactPhone" style="font-weight:bold; margin-bottom:8px; color:#333;">Phone Number</label>
-                    <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number" required style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family:inherit;">
-                    <small id="contactPhoneError" style="color:#d32f2f; margin-top:6px;"></small>
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="phone" placeholder="e.g. 082 123 4567" autocomplete="tel" required data-rule="phone">
+                    <small id="contactPhoneError" class="form-error"></small>
                 </div>
 
-                <div style="display:flex; flex-direction:column; margin-bottom:20px;">
-                    <label for="contactType" style="font-weight:bold; margin-bottom:8px; color:#333;">Type of Message</label>
-                    <select id="contactType" name="type" required style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family:inherit;">
+                <div class="form-group">
+                    <label for="contactType">Type of Message</label>
+                    <select id="contactType" name="type" required data-rule="select" data-error="Please choose a message type.">
                         <option value="">-- Choose a message type --</option>
                         <option value="General Question">General Question</option>
                         <option value="Feedback">Feedback</option>
@@ -213,123 +88,26 @@
                         <option value="Catering / Event Booking">Catering / Event Booking</option>
                         <option value="Other">Other</option>
                     </select>
-                    <small id="contactTypeError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <small id="contactTypeError" class="form-error"></small>
                 </div>
 
-                <div style="display:flex; flex-direction:column; margin-bottom:20px;">
-                    <label for="contactMessage" style="font-weight:bold; margin-bottom:8px; color:#333;">Your Message</label>
-                    <textarea id="contactMessage" name="message" rows="6" placeholder="Type your full message here..." required style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family:inherit;"></textarea>
-                    <small id="contactMessageError" style="color:#d32f2f; margin-top:6px;"></small>
+                <div class="form-group">
+                    <label for="contactMessage">Your Message</label>
+                    <textarea id="contactMessage" name="message" rows="6" maxlength="1000" placeholder="Type your full message here..." required data-rule="message"></textarea>
+                    <small id="contactMessageError" class="form-error"></small>
                 </div>
 
-                <button type="submit" style="background-color:#d32f2f; color:white; border:none; padding:14px 20px; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer; width:100%;">Prepare Email</button>
+                <button type="submit" class="submit-btn">Prepare Email</button>
             </form>
 
-            <!-- Email preview shown after the input has been validated -->
-            <div id="emailPreview" aria-live="polite" style="display:none; margin-top:30px; padding:20px; border-radius:8px; background:#fcf8f2; border:1px solid #d32f2f;"></div>
+            <!-- Shown by forms.js once the input has been validated -->
+            <div id="emailPreview" class="response-box" aria-live="polite"></div>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Lolwethu's Fast Food Kitchen</p>
     </footer>
-
-    <script>
-        (function () {
-            // The email is addressed to this recipient
-            var RECIPIENT = 'lolwethubeyi123@gmail.com';
-
-            var form = document.getElementById('contactForm');
-            var preview = document.getElementById('emailPreview');
-
-            function setError(id, message) {
-                document.getElementById(id).textContent = message;
-            }
-
-            function escapeHtml(text) {
-                var div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            }
-
-            function validate() {
-                var name = document.getElementById('contactName').value.trim();
-                var email = document.getElementById('contactEmail').value.trim();
-                var phone = document.getElementById('contactPhone').value.trim();
-                var type = document.getElementById('contactType').value;
-                var message = document.getElementById('contactMessage').value.trim();
-                var valid = true;
-
-                if (!/^[A-Za-z][A-Za-z\s'\-]{1,}$/.test(name)) {
-                    setError('contactNameError', 'Please enter your full name (letters only).');
-                    valid = false;
-                } else { setError('contactNameError', ''); }
-
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-                    setError('contactEmailError', 'Please enter a valid email address.');
-                    valid = false;
-                } else { setError('contactEmailError', ''); }
-
-                var cleanPhone = phone.replace(/[\s\-()]/g, '');
-                if (!/^(\+27|0)[1-9][0-9]{8}$/.test(cleanPhone)) {
-                    setError('contactPhoneError', 'Enter a valid South African number, e.g. 082 123 4567.');
-                    valid = false;
-                } else { setError('contactPhoneError', ''); }
-
-                if (type === '') {
-                    setError('contactTypeError', 'Please choose a message type.');
-                    valid = false;
-                } else { setError('contactTypeError', ''); }
-
-                if (message.length < 10) {
-                    setError('contactMessageError', 'Please write at least 10 characters.');
-                    valid = false;
-                } else { setError('contactMessageError', ''); }
-
-                return valid;
-            }
-
-            function compileEmail() {
-                var name = document.getElementById('contactName').value.trim();
-                var email = document.getElementById('contactEmail').value.trim();
-                var phone = document.getElementById('contactPhone').value.trim();
-                var type = document.getElementById('contactType').value;
-                var message = document.getElementById('contactMessage').value.trim();
-
-                var subject = type + ' from ' + name;
-                var body = 'Hello Lolwethu\'s Fast Food Kitchen,\n\n' +
-                    message + '\n\n' +
-                    '--- Contact details ---\n' +
-                    'Name: ' + name + '\n' +
-                    'Email: ' + email + '\n' +
-                    'Phone: ' + phone + '\n' +
-                    'Message type: ' + type;
-
-                var mailto = 'mailto:' + RECIPIENT +
-                    '?subject=' + encodeURIComponent(subject) +
-                    '&body=' + encodeURIComponent(body);
-
-                preview.innerHTML =
-                    '<h3 style="margin-top:0; color:#d32f2f; border-left:none; padding-left:0;">Your email is ready</h3>' +
-                    '<p style="margin-bottom:5px;"><strong>To:</strong> ' + escapeHtml(RECIPIENT) + '</p>' +
-                    '<p style="margin-bottom:5px;"><strong>Subject:</strong> ' + escapeHtml(subject) + '</p>' +
-                    '<p style="margin-bottom:15px; white-space:pre-wrap;"><strong>Message:</strong>\n' + escapeHtml(body) + '</p>' +
-                    '<a href="' + mailto + '" style="display:inline-block; background-color:#d32f2f; color:white; text-decoration:none; padding:12px 20px; border-radius:6px; font-weight:bold;">Send Email</a>' +
-                    '<p style="margin:15px 0 0 0; font-size:0.95rem;">Clicking the button opens your email app with everything filled in. Press send there to deliver it.</p>';
-
-                preview.style.display = 'block';
-                preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-                preview.style.display = 'none';
-                if (validate()) {
-                    compileEmail();
-                }
-            });
-        })();
-    </script>
 
 </body>
 </html>

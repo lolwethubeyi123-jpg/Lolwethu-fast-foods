@@ -3,122 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make an Enquiry - Lolwethu's Fast Food Kitchen</title>
-    <!-- Local style path -->
+    <title>Make an Enquiry | Lolwethu's Fast Food Kitchen, Gqeberha</title>
+    <meta name="description" content="Enquire about gatsbies, kotas, wings and more from Lolwethu's Fast Food Kitchen in Gqeberha. Get an instant price estimate and see if we are open for collection or delivery.">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Modern Layout & Styles */
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #fcf8f2; margin: 0; padding: 0; }
-        header { background-color: #d32f2f; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        
-        .form-container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-        }
-        .form-container h2 { color: #d32f2f; margin-top: 0; font-size: 2.2rem; }
-        .form-container p { color: #666; margin-bottom: 30px; }
-        
-        /* Forces inputs to stack neatly on top of each other */
-        .form-group {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        .form-group label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-family: inherit;
-        }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: #d32f2f;
-            outline: none;
-            box-shadow: 0 0 5px rgba(211, 47, 47, 0.2);
-        }
-        
-        .submit-btn {
-            background-color: #d32f2f;
-            color: white;
-            border: none;
-            padding: 14px 20px;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-            margin-top: 10px;
-        }
-        .submit-btn:hover { background-color: #b71c1c; }
-    </style>
+    <link rel="stylesheet" href="../css/forms.css">
+    <script src="../js/forms.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <img src="../Assets/Lolwethu's fast food logo.png" alt="Logo" width="120" height="90" style="object-fit: contain;" onerror="this.src='https://unsplash.com'">
-        <nav class="nav-links">
+    <header class="site-header">
+        <a href="../index.html">
+            <img src="../Assets/Lolwethu's fast food logo.png" alt="Lolwethu's Fast Food Kitchen logo" width="120" height="90">
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
             <a href="../index.html">Home</a>
             <a href="./about.html">About Us</a>
             <a href="./contact.html">Contact Us</a>
             <a href="./menu.html">Menu</a>
             <a href="./enquiry.html">Enquiry</a>
         </nav>
-
     </header>
 
     <main>
         <div class="form-container">
-            <h2>Make an Enquiry</h2>
+            <h1>Make an Enquiry</h1>
             <p>Fill in the form below if you have any questions or custom kitchen orders.</p>
-            
+
             <form id="enquiryForm" action="#" method="POST" novalidate>
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    <small id="nameError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required data-rule="name">
+                    <small id="nameError" class="form-error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                    <small id="phoneError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567" autocomplete="tel" required data-rule="phone">
+                    <small id="phoneError" class="form-error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    <small id="emailError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required data-rule="email">
+                    <small id="emailError" class="form-error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="meal">Select a Meal Choice</label>
-                    <select id="meal" name="meal" required>
+                    <select id="meal" name="meal" required data-rule="select" data-error="Please choose a meal.">
                         <option value="">-- Choose an option --</option>
                         <option value="gatsby" data-price="65">Full Special Gatsby</option>
                         <option value="kota" data-price="45">Special Kota</option>
-                        <option value="wings" data-price="55">Wings & Chips</option>
-                        <option value="russian" data-price="40">Russian & Chips</option>
-                        <option value="burger" data-price="60">Burger & Chips Combo</option>
+                        <option value="wings" data-price="55">Wings &amp; Chips</option>
+                        <option value="russian" data-price="40">Russian &amp; Chips</option>
+                        <option value="burger" data-price="60">Burger &amp; Chips Combo</option>
                     </select>
-                    <small id="mealError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <small id="mealError" class="form-error"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="50" value="1" required>
-                    <small id="quantityError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <input type="number" id="quantity" name="quantity" min="1" max="50" value="1" required data-rule="quantity">
+                    <small id="quantityError" class="form-error"></small>
                 </div>
 
                 <div class="form-group">
@@ -131,147 +77,21 @@
 
                 <div class="form-group">
                     <label for="message">Your Enquiry</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your enquiry here..." required></textarea>
-                    <small id="messageError" style="color:#d32f2f; margin-top:6px;"></small>
+                    <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Write your enquiry here..." required data-rule="message"></textarea>
+                    <small id="messageError" class="form-error"></small>
                 </div>
 
                 <button type="submit" class="submit-btn">Submit Enquiry</button>
             </form>
 
-            <!-- Response shown after the input has been validated -->
-            <div id="enquiryResponse" aria-live="polite" style="display:none; margin-top:30px; padding:20px; border-radius:8px; background:#fcf8f2; border:1px solid #d32f2f;"></div>
+            <!-- Shown by forms.js once the input has been validated -->
+            <div id="enquiryResponse" class="response-box" aria-live="polite"></div>
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 25px; background: #212121; color: white; margin-top: 50px;">
+    <footer class="site-footer">
         <p>&copy; 2026 Lolwethu's Fast Food Kitchen</p>
     </footer>
-
-    <script>
-        (function () {
-            var form = document.getElementById('enquiryForm');
-            var responseBox = document.getElementById('enquiryResponse');
-
-            // Placeholder business settings: change these to match your kitchen
-            var DELIVERY_FEE = 20;
-            // Opening hours from the Contact page: Mon-Sat 10:00-21:00, Sunday 11:00-20:00
-            var HOURS_WEEKDAY = { open: 10, close: 21 };
-            var HOURS_SUNDAY = { open: 11, close: 20 };
-            var BASE_PREP_MINUTES = 10;
-            var EXTRA_MINUTES_PER_MEAL = 2;
-
-            function setError(id, message) {
-                document.getElementById(id).textContent = message;
-                return message === '';
-            }
-
-            function escapeHtml(text) {
-                var div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            }
-
-            function validate() {
-                var name = document.getElementById('name').value.trim();
-                var phone = document.getElementById('phone').value.trim();
-                var email = document.getElementById('email').value.trim();
-                var meal = document.getElementById('meal').value;
-                var quantity = parseInt(document.getElementById('quantity').value, 10);
-                var message = document.getElementById('message').value.trim();
-
-                var valid = true;
-
-                // Name: at least 2 characters, letters, spaces, hyphens, apostrophes
-                if (!/^[A-Za-z][A-Za-z\s'\-]{1,}$/.test(name)) {
-                    setError('nameError', 'Please enter your full name (letters only).');
-                    valid = false;
-                } else { setError('nameError', ''); }
-
-                // Phone: South African formats, e.g. 0821234567 or +27821234567
-                var cleanPhone = phone.replace(/[\s\-()]/g, '');
-                if (!/^(\+27|0)[1-9][0-9]{8}$/.test(cleanPhone)) {
-                    setError('phoneError', 'Enter a valid South African number, e.g. 082 123 4567.');
-                    valid = false;
-                } else { setError('phoneError', ''); }
-
-                // Email
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-                    setError('emailError', 'Please enter a valid email address.');
-                    valid = false;
-                } else { setError('emailError', ''); }
-
-                // Meal
-                if (meal === '') {
-                    setError('mealError', 'Please choose a meal.');
-                    valid = false;
-                } else { setError('mealError', ''); }
-
-                // Quantity
-                if (isNaN(quantity) || quantity < 1 || quantity > 50) {
-                    setError('quantityError', 'Quantity must be between 1 and 50.');
-                    valid = false;
-                } else { setError('quantityError', ''); }
-
-                // Message
-                if (message.length < 10) {
-                    setError('messageError', 'Please write at least 10 characters.');
-                    valid = false;
-                } else { setError('messageError', ''); }
-
-                return valid;
-            }
-
-            function buildResponse() {
-                var mealSelect = document.getElementById('meal');
-                var option = mealSelect.options[mealSelect.selectedIndex];
-                var price = parseFloat(option.getAttribute('data-price'));
-                var quantity = parseInt(document.getElementById('quantity').value, 10);
-                var service = document.getElementById('service').value;
-                var name = document.getElementById('name').value.trim();
-
-                var subtotal = price * quantity;
-                var delivery = service === 'delivery' ? DELIVERY_FEE : 0;
-                var total = subtotal + delivery;
-
-                // Bulk orders get a 10% discount for 10 or more meals
-                var discount = quantity >= 10 ? subtotal * 0.10 : 0;
-                total -= discount;
-
-                var prepMinutes = BASE_PREP_MINUTES + (quantity * EXTRA_MINUTES_PER_MEAL);
-
-                var now = new Date();
-                var hour = now.getHours();
-                var hours = now.getDay() === 0 ? HOURS_SUNDAY : HOURS_WEEKDAY;
-                var isOpen = hour >= hours.open && hour < hours.close;
-                var availability = isOpen
-                    ? 'We are open now (until ' + hours.close + ':00 today), and your order would be ready in about ' + prepMinutes + ' minutes.'
-                    : 'We are currently closed. Our hours are Monday to Saturday 10:00 to 21:00 and Sunday 11:00 to 20:00. Your order would take about ' + prepMinutes + ' minutes once we open.';
-
-                var html = '<h3 style="margin-top:0; color:#d32f2f;">Thank you, ' + escapeHtml(name) + '!</h3>' +
-                    '<p style="margin-bottom:10px;">Here is the estimate for your enquiry:</p>' +
-                    '<ul style="color:#333; line-height:1.8;">' +
-                    '<li>' + quantity + ' x ' + escapeHtml(option.text) + ' at R' + price.toFixed(2) + ' each = <strong>R' + subtotal.toFixed(2) + '</strong></li>' +
-                    (discount > 0 ? '<li>Bulk discount (10%): <strong>-R' + discount.toFixed(2) + '</strong></li>' : '') +
-                    '<li>' + (service === 'delivery' ? 'Delivery fee: <strong>R' + delivery.toFixed(2) + '</strong>' : 'Collection: <strong>free</strong>') + '</li>' +
-                    '<li>Estimated total: <strong>R' + total.toFixed(2) + '</strong></li>' +
-                    '</ul>' +
-                    '<p style="margin-bottom:10px;"><strong>Availability:</strong> ' + availability + '</p>' +
-                    '<p style="margin-bottom:0;">We will reply to your enquiry at ' + escapeHtml(document.getElementById('email').value.trim()) + ' as soon as possible.</p>';
-
-                responseBox.innerHTML = html;
-                responseBox.style.display = 'block';
-                responseBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-                responseBox.style.display = 'none';
-                if (validate()) {
-                    buildResponse();
-                }
-            });
-        })();
-    </script>
 
 </body>
 </html>

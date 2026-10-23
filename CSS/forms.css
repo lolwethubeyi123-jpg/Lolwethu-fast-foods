@@ -1,0 +1,265 @@
+/* ==========================================================
+   forms.css - Part 3
+   Shared styles for enquiry.html and contact.html.
+   Load AFTER style.css so these rules sit on top of it.
+   ========================================================== */
+
+/* --- Page shell (header, nav, footer) --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcf8f2;
+    color: #333;
+}
+
+.site-header {
+    background-color: #d32f2f;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.site-header img {
+    object-fit: contain;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #fbc02d;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #212121;
+    color: white;
+    margin-top: 50px;
+}
+
+/* --- Page layout --- */
+.page-content-padding {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 2.6rem;
+    color: #d32f2f;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.page-title p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+}
+
+.form-container,
+.contact-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.form-container h1 {
+    color: #d32f2f;
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+.form-container > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-card h2 {
+    color: #d32f2f;
+    font-size: 1.3rem;
+    margin: 25px 0 10px 0;
+    border-left: 4px solid #fbc02d;
+    padding-left: 10px;
+}
+
+.contact-card h2:first-child {
+    margin-top: 0;
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 15px 0;
+}
+
+.contact-card p a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card p a:hover {
+    text-decoration: underline;
+    color: #b71c1c;
+}
+
+/* --- Form fields --- */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d32f2f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.25);
+}
+
+/* Invalid / valid state set by forms.js */
+.form-group [aria-invalid="true"] {
+    border-color: #d32f2f;
+    background-color: #fff5f5;
+}
+
+.form-error {
+    color: #c62828;
+    margin-top: 6px;
+    min-height: 1em;
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #b71c1c;
+}
+
+.submit-btn:disabled {
+    background-color: #999;
+    cursor: wait;
+}
+
+/* --- Response / email preview box --- */
+.response-box {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fcf8f2;
+    border: 1px solid #d32f2f;
+}
+
+.response-box h3 {
+    margin-top: 0;
+    color: #d32f2f;
+}
+
+.response-box ul {
+    color: #333;
+    line-height: 1.8;
+}
+
+.response-box .email-body {
+    white-space: pre-wrap;
+    margin-bottom: 15px;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    background-color: #b71c1c;
+}
+
+/* --- Interactive map (Leaflet) --- */
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    z-index: 0;
+}
+
+/* --- Small screens --- */
+@media (max-width: 600px) {
+    .form-container,
+    .contact-card {
+        padding: 25px 18px;
+    }
+
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        margin: 6px 10px 6px 0;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
